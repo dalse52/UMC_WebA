@@ -1,0 +1,31 @@
+* * {
+    text-align: center;
+}
+
+body {
+    background-color:lavender;
+}
+
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div > div {
+    display: inline-block;
+    margin:10%;
+}
+
+#content {
+    
+}
+
+.do {
+
+}
+
+.btn {
+
+}
