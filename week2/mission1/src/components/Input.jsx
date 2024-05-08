@@ -15,7 +15,7 @@ function Input() {
     function Enter(e) {
 
         if(e.key === 'Enter') {
-            console.log("Enter 키 눌림");
+            console.log("Enter 눌림");
 
             const newtodo = { id: Id + 1, content: InText, isDone: false };
             //진심 이해 x. setId 냅두고 왜 저렇게 변경하지?
