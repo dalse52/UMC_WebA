@@ -12,12 +12,12 @@ function App() {
 
   const open = () => {
     console.log("open 클릭됨");
-    setModal(true);
+    setModal((modal) => (true));
     console.log(modal);
   }
 
   const close = () => {
-    setModal(false);
+    setModal((modal) => (false));
     console.log(modal);
   }
 

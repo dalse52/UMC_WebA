@@ -1,0 +1,4 @@
+div > div > div > div {
+    display: inline-block;
+    margin:10%;
+  }
