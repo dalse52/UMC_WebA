@@ -2,3 +2,7 @@ div > div > div > div {
     display: inline-block;
     margin:10%;
   }
+
+  li * {
+    display: inline-block;
+  }
