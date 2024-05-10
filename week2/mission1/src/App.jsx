@@ -23,8 +23,8 @@ function App() {
       <Input addTodo={addTodo}></Input>
       <br></br>
       <div>
-      <List name="해야 할 일" Todos={Todos}></List>
-      <List name="해낸 일" Todos={Todos}></List>
+      <List name="해야 할 일" Todos={Todos} setTodos={setTodos}></List>
+      <List name="해낸 일" Todos={Todos} setTodos={setTodos}></List>
       </div>
     </>
   )

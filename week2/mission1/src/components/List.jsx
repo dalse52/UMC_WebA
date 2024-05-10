@@ -1,18 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Input from './Input.jsx'
 import './List.css'
 
-function List({ name, Todos }) {
-    function click(e) {
-        console.log(e.target.parentElement.key);
-        if (!isDone) {
-            SetTodos(e.target.value);
-            SetTodos([...Todos]);
-            console.log("!isDone");
-        } else {
-            SetTodos([...Todos]); 
-            console.log("else");
-        }
+function List({ name, Todos, setTodos }) {
+    function click(id) { //chat GPT (...)
+        console.log(id);
+        setTodos(prevTodos => {
+            return prevTodos.map(todo => {
+                if (todo.id === id) {
+                    if (todo.isDone == false) {
+                        return { ...todo, isDone: !todo.isDone };
+                    }
+                    else {
+                        console.log("제거하기");
+                        return (todo.filter(todo => todo.id !== todo.id)) // 오류 발생
+                    }
+                    // return { ...todo, isDone: !todo.isDone };
+                }
+                return todo;
+            });
+        });
+
+
+        // setTodos(Todos => {
+        //     const newTodos = [...Todos];
+        //     newTodos[id].isDone = !newTodos[id].isDone;
+        //     return newTodos;
+        // });
+
+
+        // const clicked = e.target.parentElement;
+        // if (e.target.parentElement.className == "willdo") {
+        //     e.target.text = "삭제";
+        // }
+        // else if (e.target.parentElement.className == "done") {
+        //     console.log(clicked.parentElement);
+        //     (clicked.parentElement).removeChild(clicked);
+        // } 
 
     }
 
@@ -21,9 +45,9 @@ function List({ name, Todos }) {
             <h3>{name}</h3>
             <ul>
                 {Todos.map((todo) => (
-                    <li key={todo.id} isDone={todo.isDone? 'true':'false'}>
+                    <li key={todo.id} className={todo.isDone? "done":"willdo"}>
                     <span>{todo.content}</span>
-                    <button onClick={(e) => click}>{todo.isDone? "삭제":"완료"}
+                    <button onClick={() => click(todo.id)}>{todo.isDone? "삭제":"완료"}
                     </button>
                     <hr></hr>
                     </li>
