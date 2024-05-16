@@ -46,12 +46,27 @@ function List({ name, Todos, setTodos }) {
             <h3>{name}</h3>
             <ul>
                 {Todos.map((todo) => (
-                    <li key={todo.id} className={todo.isDone? "done":"willdo"}>
+                    {todo.isDone? (
+                        <li key={todo.id} className={todo.isDone? "done":"willdo"}>
                     <span>{todo.content}</span>
                     <button onClick={() => click(todo.id)}>{todo.isDone? "삭제":"완료"}
                     </button>
                     <hr></hr>
                     </li>
+                    ) : (
+                        <li key={todo.id} className={todo.isDone? "done":"willdo"}>
+                    <span>{todo.content}</span>
+                    <button onClick={() => click(todo.id)}>{todo.isDone? "삭제":"완료"}
+                    </button>
+                    <hr></hr>
+                    </li>
+                    )}
+                    // <li key={todo.id} className={todo.isDone? "done":"willdo"}>
+                    // <span>{todo.content}</span>
+                    // <button onClick={() => click(todo.id)}>{todo.isDone? "삭제":"완료"}
+                    // </button>
+                    // <hr></hr>
+                    // </li>
                 ))}
             </ul>
         </>

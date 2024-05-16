@@ -1,0 +1,35 @@
+* {
+    color: white;
+}
+
+p {
+    text-overflow: ellipsis;
+}
+
+div > div:hover {
+
+}
+
+div > div > div {
+    display: block;
+    background-color: rgb(74, 74, 155);
+    border-radius: 5px;
+    width: 200px;
+    height: 400px;
+}
+
+div div {
+    display: inline-block;
+    margin: 50px;
+    
+    position: relative;
+    margin-inline: 20px;
+}
+
+span {
+    margin-inline: 5px;
+}
+
+img {
+    margin-bottom: 10px;
+}

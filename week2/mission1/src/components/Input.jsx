@@ -8,7 +8,14 @@ function Input({ addTodo }) {
         if(e.key === 'Enter') {
             console.log("Enter 눌림");
 
-            const newTodo = { id: Id + 1, content: InText, isDone: false };
+            //const newTodo = { id: Id + 1, content: InText, isDone: false };
+            setId(Id => Id + 1);
+            console.log(Id);
+            const newTodo = {
+                id: Id,
+                content: InText,
+                isDone: false
+            };
             //진심 이해 x. setId 냅두고 왜 저렇게 변경하지?
             
             addTodo(newTodo);
@@ -26,8 +33,8 @@ function Input({ addTodo }) {
 
             setInText("");
 
-            console.log(InText);
-            console.log(Todos);
+            //console.log(InText);
+            //console.log(Todos);
         }
     }
 

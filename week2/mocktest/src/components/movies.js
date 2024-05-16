@@ -1,3 +1,5 @@
+// export const BASE_URL = "https://image.tmdb.org/t/p";
+
 export const movies = {
     "dates": {
       "maximum": "2023-09-17",

@@ -4,16 +4,17 @@ import './List.css'
 
 function List({ name, Todos, setTodos }) {
     function click(id) { //chat GPT (...)
+        console.log(Todos);
         console.log(id);
-        setTodos(prevTodos => {
-            return prevTodos.map(todo => {
+        setTodos(Todos => {
+            return Todos.map(todo => {
                 if (todo.id === id) {
                     if (todo.isDone == false) {
                         return { ...todo, isDone: !todo.isDone };
                     }
                     else {
                         console.log("제거하기");
-                        return (todo.filter(todo => todo.id !== todo.id)) // 오류 발생
+                        todo.filter(todo => todo.id !== todo.id) // 오류 발생?
                     }
                     // return { ...todo, isDone: !todo.isDone };
                 }
