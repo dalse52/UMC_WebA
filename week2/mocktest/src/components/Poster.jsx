@@ -1,8 +1,8 @@
 import React from 'react'
 import { movies } from './movies.js'
-import './Poster.css'
+// import './Poster.css'
 
-const base_url = "https://image.tmdb.org/t/p"; // 환경변수로 설정해야지...
+const base_url = "https://image.tmdb.org/t/p"; // 환경변수로 설정 -> 나중에
 const file_size = "/w200";
 
 class Poster extends React.Component {
@@ -33,18 +33,18 @@ class Poster extends React.Component {
     
     // 구조분해할당 하기.
         return (
-            <div>
+            <>
                 {this.state.movieList.map(movie => (
-                    <div key={movie.id}>
+                    <div key={movie.id} className='content'>
                         <img src={base_url + file_size + movie.poster_path}></img>
                         <div>
-                        <span>{movie.title}</span>
-                        <span>{movie.vote_average}</span>
+                        <span className='title'>{movie.title}</span>
+                        <span className='average'>{movie.vote_average}</span>
                         {/* <p>overview={movie.overview}</p> */}
                         </div>
-                </div>
+                    </div>
                 ))}
-            </div>
+            </>
         );
     }
 

@@ -1,14 +1,103 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 2rem;
-  text-align: center;
   background-color: rgb(0, 0, 107);
+  position: sticky;
+
+  font-size: 0;
+  vertical-align: text-top;
 }
 
+/* poster */
+
+div > div > div {
+  position: relative;
+  top: -10px;
+  display: block;
+  background-color: rgb(74, 74, 155);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 180px;
+  height: 80px;
+  padding: 10px;
+  font-size: 0;
+}
+
+.content {
+  display: inline-block;
+  position: relative;
+  margin-inline: 10px;
+  vertical-align: text-top;
+}
+
+span {
+  margin-inline: 5px;
+  font-size: medium;
+}
+.title {
+  text-align: left;
+}
+
+.average {
+  text-align: right;
+}
+
+img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* margin-bottom: 10px; */
+}
+
+/* poster_hover */
 * {
   position: sticky;
+  color: white;
 }
+
+.hover {
+  font-size: medium;
+  color: white;
+  background-color: rgb(0, 0, 0, 0.5);
+  /* visibility: hidden; */
+  position: relative;
+  border-radius: 5px;
+  margin-inline: 10px;
+  display: inline-block;
+  width: 180px;
+  height: 380px;
+  padding: 10px;
+  vertical-align: text-top;
+}
+
+.hoverview {
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+}
+
+/* div * {
+  position: relative;
+} */
+
+div:hover {
+  visibility: visible;
+  /* filter: */
+}
+
+
+
+
+
+
+
+
+
+
 
 .logo {
   height: 6em;
@@ -21,27 +110,4 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

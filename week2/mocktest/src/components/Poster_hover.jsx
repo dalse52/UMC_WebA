@@ -1,8 +1,8 @@
 import React from 'react'
 import { movies } from './movies.js'
-import './Poster_hover.css'
+// import './Poster_hover.css'
 
-const base_url = "https://image.tmdb.org/t/p"; // 환경변수로 설정해야지...
+const base_url = "https://image.tmdb.org/t/p"; // 환경변수...
 const file_size = "/w200";
 
 class Poster_hover extends React.Component {
@@ -31,16 +31,16 @@ class Poster_hover extends React.Component {
     // const base_url = "https://image.tmdb.org/t/p";
     // const file_size = "/w400";
         return (
-            <div>
+            <>
                 {this.state.movieList.map(movie => (
-                    <div key={movie.id}>
+                    <div key={movie.id} className='hover'>
                         {/* <img src={base_url + file_size + movie.poster_path}></img> */}
                         <p>{movie.title}</p>
                         {/* <p>{movie.vote_average}</p> */}
-                        <p>{movie.overview}</p>
+                        <p className='hoverview'>{movie.overview}</p>
                 </div>
                 ))}
-            </div>
+            </>
         );
     }
 

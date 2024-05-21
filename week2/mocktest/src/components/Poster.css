@@ -11,19 +11,20 @@ div > div:hover {
 }
 
 div > div > div {
+    position: relative;
+    top: -10px; /* 왜?... */
     display: block;
     background-color: rgb(74, 74, 155);
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     width: 200px;
-    height: 400px;
+    height: 100px;
 }
 
-div div {
+.content {
     display: inline-block;
-    margin: 50px;
-    
     position: relative;
-    margin-inline: 20px;
+    margin-inline: 10px;
 }
 
 span {
@@ -31,5 +32,7 @@ span {
 }
 
 img {
-    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* margin-bottom: 10px; */
 }

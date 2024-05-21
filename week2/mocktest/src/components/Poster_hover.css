@@ -1,5 +1,7 @@
-* {
+.hover {
     color: white;
+    visibility: hidden;
+    position: sticky;
 }
 
 div * {
@@ -10,25 +12,10 @@ p {
     text-overflow: ellipsis;
 }
 
-div > div:hover {
-
-}
-
-div > div > div {
-    display: block;
-    background-color: rgb(74, 74, 155);
-    border-radius: 5px;
-}
-
-div div {
-    display: inline-block;
-    margin: 50px;
+.content:hover {
+    visibility: visible;
 }
 
 span {
     margin-inline: 5px;
-}
-
-img {
-    margin-block: 10px;
 }
