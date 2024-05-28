@@ -18,6 +18,12 @@ function MainPage() {
       <h2>환영합니다</h2>
     </Main>
   )
+
+  // return (
+  //   <div className='mainpage'>
+  //     <h2>환영합니다</h2>
+  //   </div>
+  // )
 }
 
 export default MainPage

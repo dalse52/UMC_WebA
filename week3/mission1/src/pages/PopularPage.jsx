@@ -18,7 +18,7 @@ const Info = styled.div`
   position: relative;
   top: -10px;
   display: block;
-  background-color: rgb(74, 74, 155);
+  background-color: #32355F;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 180px;
