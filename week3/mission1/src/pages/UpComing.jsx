@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import styled from 'styled-components'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function UpComing() {
 
   return (
     <>
-      
+      <p>UpComing임.</p>
     </>
   )
 }
 
-export default App
+export default UpComing

@@ -32,8 +32,9 @@ class Poster extends React.Component {
     // const file_size = "/w400";
     
     // 구조분해할당 하기.
+    // this...?...?
         return (
-            <>
+            <> 
                 {this.state.movieList.map(movie => (
                     <div key={movie.id} className='content'>
                         <img src={base_url + file_size + movie.poster_path}></img>
