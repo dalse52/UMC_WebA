@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+// 애초에 navbar에 usestate를 두는 게 바람직한가?...
 
 const Nav = styled.div`
     // position:absolute;
@@ -29,20 +31,26 @@ const Tab = styled(Link)`
 
     &:hover{  
         // 커서 변경은 크롬에서 해 주는 것 같은데?...
-        font-size: larger;
+        font-size: large;
         vertical-align: text-top;
       }
 `;
 
+function Navbar({ login }) {
+    const [Login, setLogin] = useState(false);
 
-function Navbar() {
+    const signup = () => {
+        // 회원가입 통과 시에 상태 변경
+        setLogin(!Login);
+    }
+
     return (
         <Nav>
             <Menu>
                 <Tab to="/">UMC Movie</Tab>
             </Menu>
             <Menu>
-                <Tab to="/main">회원가입</Tab>
+                <Tab to="/signup" onClick={signup}>{Login? "로그아웃":"회원가입"}</Tab> 
                 <Tab to="/popular">Popular</Tab>
                 <Tab to="/nowplaying">Now Playing</Tab>
                 <Tab to="/toprated">Top Rated</Tab>
